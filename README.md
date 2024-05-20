@@ -6,7 +6,7 @@ This project is a snake game built through sequential logic in VHDL. Players wil
 
 ## Developers
 
-Senri Nakamura, Alex Moy, Brian Kim 
+Brian Kim, Senri Nakamura, Alex Moy
 
 ## Description
 
