@@ -1,0 +1,5977 @@
+<HTML>
+<HEAD>
+<TITLE>Synthesis Report</TITLE>
+<link href="file:///C:/lscc/radiant/2023.1/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/2023.1/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 2023.1.0.43.3
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Dec 18 14:50:54 2023
+
+
+Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f snake_impl_1_lattice.synproj -gui -msgset Z:/final/snake/promote.xml 
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family     : iCE40UP
+
+
+### Device             : iCE40UP5K
+
+
+### Package            : SG48
+
+
+### Performance Grade  : High-Performance_1.2V
+
+
+                                                         
+
+
+INFO <35001786> - synthesis: User-Selected Strategy Settings
+Optimization goal = Area
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3 (default)
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = snake_impl_1.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-sdc option: SDC file input is snake_impl_1_cpe.ldc.
+-vh2008
+
+-path C:/lscc/radiant/2023.1/ispfpga/ice40tp/data (searchpath added)
+-path Z:/final/snake (searchpath added)
+-path Z:/final/snake/impl_1 (searchpath added)
+-path Z:/final/snake/mypll (searchpath added)
+Mixed language design
+Verilog design file = C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.v
+Verilog design file = Z:/final/snake/mypll/rtl/mypll.v
+VHDL library = pmi
+VHDL design file = C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.vhd
+VHDL library = work
+VHDL design file = Z:/final/snake/source/impl_1/top.vhd
+VHDL library = work
+VHDL design file = Z:/final/snake/source/impl_1/NEScontroller.vhd
+VHDL library = work
+VHDL design file = Z:/final/snake/source/impl_1/background.vhd
+VHDL library = work
+VHDL design file = Z:/final/snake/source/impl_1/vga.vhd
+VHDL library = work
+VHDL design file = Z:/final/snake/source/impl_1/memory.vhd
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM7 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM6 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM5 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM4 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM3 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM2 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM1 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM0 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port I is not connected on this instance. VDB-5050
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v. VERI-1482
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(1): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_addsub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_addsub.v(40): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(2): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_add.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_add.v(50): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(3): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_complex_mult.v(52): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(4): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_counter.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_counter.v(39): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/counter/rtl/lscc_cntr.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(5): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_fifo.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_fifo.v(44): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/fifo/rtl/lscc_fifo.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(6): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_fifo_dc.v(47): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(7): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_mac.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_mac.v(52): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(8): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_multaddsubsum.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_multaddsubsum.v(53): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(9): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_multaddsub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_multaddsub.v(52): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(10): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_mult.v(51): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(11): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp.v(48): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(12): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq.v(45): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(13): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_rom.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_rom.v(45): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/rom/rtl/lscc_rom.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(14): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_sub.v(50): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(15): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp_be.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp_be.v(49): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(16): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq_be.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_dsp.v. VERI-1328
+Analyzing Verilog file z:/final/snake/mypll/rtl/mypll.v. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd
+
+INFO <35921014> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
+Analyzing VHDL file z:/final/snake/source/impl_1/top.vhd. VHDL-1481
+Analyzing VHDL file z:/final/snake/source/impl_1/top.vhd
+
+INFO <35921012> - synthesis: z:/final/snake/source/impl_1/top.vhd(6): analyzing entity top. VHDL-1012
+INFO <35921010> - synthesis: z:/final/snake/source/impl_1/top.vhd(20): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/final/snake/source/impl_1/nescontroller.vhd. VHDL-1481
+Analyzing VHDL file z:/final/snake/source/impl_1/nescontroller.vhd
+
+INFO <35921012> - synthesis: z:/final/snake/source/impl_1/nescontroller.vhd(6): analyzing entity nescontroller. VHDL-1012
+INFO <35921010> - synthesis: z:/final/snake/source/impl_1/nescontroller.vhd(15): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/final/snake/source/impl_1/background.vhd. VHDL-1481
+Analyzing VHDL file z:/final/snake/source/impl_1/background.vhd
+
+INFO <35921012> - synthesis: z:/final/snake/source/impl_1/background.vhd(6): analyzing entity background. VHDL-1012
+INFO <35921010> - synthesis: z:/final/snake/source/impl_1/background.vhd(27): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/final/snake/source/impl_1/vga.vhd. VHDL-1481
+Analyzing VHDL file z:/final/snake/source/impl_1/vga.vhd
+
+INFO <35921012> - synthesis: z:/final/snake/source/impl_1/vga.vhd(6): analyzing entity vga. VHDL-1012
+INFO <35921010> - synthesis: z:/final/snake/source/impl_1/vga.vhd(17): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/final/snake/source/impl_1/memory.vhd. VHDL-1481
+Analyzing VHDL file z:/final/snake/source/impl_1/memory.vhd
+
+INFO <35921012> - synthesis: z:/final/snake/source/impl_1/memory.vhd(5): analyzing entity start_screen. VHDL-1012
+INFO <35921010> - synthesis: z:/final/snake/source/impl_1/memory.vhd(14): analyzing architecture synth. VHDL-1010
+INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/final/snake/impl_1". VHDL-1504
+Top module language type = VHDL.
+WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+Top module name (VHDL, mixed language): top
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING <35935047> - synthesis: Unused instance myOsc is removed. VDB-5047
+WARNING <35001771> - synthesis: Initial value found on net random_x[15] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[14] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[13] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[12] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[11] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[10] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[9] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[8] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[7] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[6] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[5] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_x[0] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[15] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[14] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[13] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[12] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[11] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[10] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[9] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[8] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[7] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[6] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[5] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net random_y[0] will be ignored due to unrecognized driver type
+WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+WARNING <35931002> - synthesis: z:/final/snake/mypll/rtl/mypll.v(139): net \pll/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING <35931002> - synthesis: z:/final/snake/mypll/rtl/mypll.v(140): net \pll/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+######## Missing driver on net \pll/lscc_pll_inst/sclk_i. Patching with GND.
+######## Missing driver on net \pll/lscc_pll_inst/sdi_i. Patching with GND.
+
+
+
+Combinational loop found : 1
+
+ Net \pat_gen/random_x[15] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net n3670 
+
+ Instance \pat_gen/mux_207_i16 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+Combinational loop found : 2
+
+ Net n3670 
+
+ Instance \pat_gen/mux_207_i16 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 3
+
+ Net n3673 
+
+ Instance \pat_gen/mux_207_i15 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 4
+
+ Net n3676 
+
+ Instance \pat_gen/mux_207_i14 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 5
+
+ Net n3679 
+
+ Instance \pat_gen/mux_207_i13 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 6
+
+ Net n3682 
+
+ Instance \pat_gen/mux_207_i12 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 7
+
+ Net n3685 
+
+ Instance \pat_gen/mux_207_i11 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 8
+
+ Net n3688 
+
+ Instance \pat_gen/mux_207_i10 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 9
+
+ Net n3691 
+
+ Instance \pat_gen/mux_207_i9 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 10
+
+ Net n3694 
+
+ Instance \pat_gen/mux_207_i8 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 11
+
+ Net n3697 
+
+ Instance \pat_gen/mux_207_i7 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 12
+
+ Net n3700 
+
+ Instance \pat_gen/mux_207_i6 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/random_x[5] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 13
+
+ Net n3703 
+
+ Instance \pat_gen/mux_207_i5 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/random_x[5] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/random_x[4] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 14
+
+ Net \pat_gen/random_x[3] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/random_x[5] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/random_x[4] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1483 
+
+ Instance \pat_gen/mux_206_i4 
+
+Combinational loop found : 15
+
+ Net n3510 
+
+ Instance \pat_gen/i206 
+
+ Net n3712 
+
+ Instance \pat_gen/mux_207_i4 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/random_x[5] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/random_x[4] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1483 
+
+ Instance \pat_gen/mux_206_i4 
+
+Combinational loop found : 16
+
+ Net n3712 
+
+ Instance \pat_gen/mux_207_i4 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/LessThan_202/n28 
+
+ Instance i936 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/random_x[5] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/random_x[4] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net n3519 
+
+ Instance i934 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+ Net \pat_gen/LessThan_202/n16 
+
+ Instance i941 
+
+ Net \pat_gen/LessThan_202/n14 
+
+ Instance i652 
+
+ Net \pat_gen/LessThan_202/n12 
+
+ Instance i650 
+
+ Net \pat_gen/LessThan_202/n10 
+
+ Instance i648 
+
+ Net \pat_gen/LessThan_202/n8 
+
+ Instance i942 
+
+ Net \pat_gen/random_x[2] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 17
+
+ Net \pat_gen/random_x[2] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1484 
+
+ Instance \pat_gen/mux_206_i3 
+
+Combinational loop found : 18
+
+ Net n3519 
+
+ Instance i934 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+ Net \pat_gen/LessThan_202/n16 
+
+ Instance i941 
+
+ Net \pat_gen/LessThan_202/n14 
+
+ Instance i652 
+
+ Net \pat_gen/LessThan_202/n12 
+
+ Instance i650 
+
+ Net \pat_gen/LessThan_202/n10 
+
+ Instance i648 
+
+ Net \pat_gen/LessThan_202/n8 
+
+ Instance i942 
+
+Combinational loop found : 19
+
+ Net n3721 
+
+ Instance \pat_gen/mux_207_i2 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/LessThan_202/n28 
+
+ Instance i936 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/random_x[5] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/random_x[4] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1485 
+
+ Instance \pat_gen/mux_206_i2 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+ Net \pat_gen/LessThan_202/n16 
+
+ Instance i941 
+
+ Net \pat_gen/LessThan_202/n14 
+
+ Instance i652 
+
+ Net \pat_gen/LessThan_202/n12 
+
+ Instance i650 
+
+ Net \pat_gen/LessThan_202/n10 
+
+ Instance i648 
+
+ Net \pat_gen/LessThan_202/n8 
+
+ Instance i942 
+
+ Net \pat_gen/random_x[1] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 20
+
+ Net n3724 
+
+ Instance \pat_gen/mux_207_i1 
+
+ Net \pat_gen/n1471 
+
+ Instance \pat_gen/mux_206_i16 
+
+ Net \pat_gen/n1467 
+
+ Instance i669 
+
+ Net \pat_gen/LessThan_203/n30 
+
+ Instance i668 
+
+ Net \pat_gen/LessThan_203/n28 
+
+ Instance i667 
+
+ Net \pat_gen/LessThan_203/n26 
+
+ Instance i666 
+
+ Net \pat_gen/LessThan_203/n24 
+
+ Instance i665 
+
+ Net \pat_gen/LessThan_203/n22 
+
+ Instance i664 
+
+ Net \pat_gen/LessThan_203/n20 
+
+ Instance i933 
+
+ Net \pat_gen/LessThan_203/n18 
+
+ Instance i663 
+
+ Net \pat_gen/LessThan_203/n16 
+
+ Instance i662 
+
+ Net \pat_gen/LessThan_203/n14 
+
+ Instance i661 
+
+ Net \pat_gen/LessThan_203/n12 
+
+ Instance i660 
+
+ Net \pat_gen/LessThan_203/n10 
+
+ Instance i659 
+
+ Net \pat_gen/LessThan_202/n28 
+
+ Instance i936 
+
+ Net \pat_gen/n1472 
+
+ Instance \pat_gen/mux_206_i15 
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/random_x[5] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/random_x[4] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1485 
+
+ Instance \pat_gen/mux_206_i2 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+ Net \pat_gen/LessThan_202/n16 
+
+ Instance i941 
+
+ Net \pat_gen/LessThan_202/n14 
+
+ Instance i652 
+
+ Net \pat_gen/LessThan_202/n12 
+
+ Instance i650 
+
+ Net \pat_gen/LessThan_202/n10 
+
+ Instance i648 
+
+ Net \pat_gen/LessThan_202/n8 
+
+ Instance i942 
+
+ Net \pat_gen/n1486 
+
+ Instance \pat_gen/mux_206_i1 
+
+ Net \pat_gen/random_x[1] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/random_x[0] 
+
+ Instance \pat_gen/add_208_add_5 
+
+Combinational loop found : 21
+
+ Net \pat_gen/random_x[4] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+ Net \pat_gen/LessThan_202/n16 
+
+ Instance i941 
+
+ Net \pat_gen/LessThan_202/n14 
+
+ Instance i652 
+
+ Net \pat_gen/LessThan_202/n12 
+
+ Instance i650 
+
+ Net \pat_gen/LessThan_202/n10 
+
+ Instance i648 
+
+Combinational loop found : 22
+
+ Net \pat_gen/random_x[5] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+ Net \pat_gen/LessThan_202/n16 
+
+ Instance i941 
+
+ Net \pat_gen/LessThan_202/n14 
+
+ Instance i652 
+
+ Net \pat_gen/LessThan_202/n12 
+
+ Instance i650 
+
+Combinational loop found : 23
+
+ Net \pat_gen/random_x[6] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+ Net \pat_gen/LessThan_202/n16 
+
+ Instance i941 
+
+ Net \pat_gen/LessThan_202/n14 
+
+ Instance i652 
+
+Combinational loop found : 24
+
+ Net \pat_gen/random_x[7] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+ Net \pat_gen/LessThan_202/n16 
+
+ Instance i941 
+
+Combinational loop found : 25
+
+ Net \pat_gen/random_x[8] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+ Net \pat_gen/LessThan_202/n18 
+
+ Instance i940 
+
+Combinational loop found : 26
+
+ Net \pat_gen/random_x[9] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+ Net \pat_gen/LessThan_202/n20 
+
+ Instance i654 
+
+Combinational loop found : 27
+
+ Net \pat_gen/random_x[10] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+ Net \pat_gen/LessThan_202/n22 
+
+ Instance i939 
+
+Combinational loop found : 28
+
+ Net \pat_gen/random_x[11] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+ Net \pat_gen/LessThan_202/n24 
+
+ Instance i938 
+
+Combinational loop found : 29
+
+ Net \pat_gen/random_x[12] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+ Net \pat_gen/LessThan_202/n26 
+
+ Instance i937 
+
+Combinational loop found : 30
+
+ Net \pat_gen/random_x[13] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+Combinational loop found : 31
+
+ Net \pat_gen/random_x[14] 
+
+ Instance \pat_gen/add_208_add_5 
+
+ Net \pat_gen/n1473 
+
+ Instance \pat_gen/mux_206_i14 
+
+ Net \pat_gen/n1474 
+
+ Instance \pat_gen/mux_206_i13 
+
+ Net \pat_gen/n1475 
+
+ Instance \pat_gen/mux_206_i12 
+
+ Net \pat_gen/n1476 
+
+ Instance \pat_gen/mux_206_i11 
+
+ Net \pat_gen/n1477 
+
+ Instance \pat_gen/mux_206_i10 
+
+ Net \pat_gen/n1478 
+
+ Instance \pat_gen/mux_206_i9 
+
+ Net \pat_gen/n1479 
+
+ Instance \pat_gen/mux_206_i8 
+
+ Net \pat_gen/n1480 
+
+ Instance \pat_gen/mux_206_i7 
+
+ Net \pat_gen/n1481 
+
+ Instance \pat_gen/mux_206_i6 
+
+ Net \pat_gen/n1482 
+
+ Instance \pat_gen/mux_206_i5 
+
+Combinational loop found : 32
+
+ Net \pat_gen/random_y[15] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net n3763 
+
+ Instance \pat_gen/mux_214_i16 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+Combinational loop found : 33
+
+ Net n3763 
+
+ Instance \pat_gen/mux_214_i16 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 34
+
+ Net n3766 
+
+ Instance \pat_gen/mux_214_i15 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 35
+
+ Net n3769 
+
+ Instance \pat_gen/mux_214_i14 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 36
+
+ Net n3772 
+
+ Instance \pat_gen/mux_214_i13 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 37
+
+ Net n3775 
+
+ Instance \pat_gen/mux_214_i12 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 38
+
+ Net n3778 
+
+ Instance \pat_gen/mux_214_i11 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 39
+
+ Net n3781 
+
+ Instance \pat_gen/mux_214_i10 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 40
+
+ Net n3784 
+
+ Instance \pat_gen/mux_214_i9 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 41
+
+ Net n3787 
+
+ Instance \pat_gen/mux_214_i8 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 42
+
+ Net n3790 
+
+ Instance \pat_gen/mux_214_i7 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/random_y[6] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 43
+
+ Net n3793 
+
+ Instance \pat_gen/mux_214_i6 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/random_y[6] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/random_y[5] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 44
+
+ Net n3796 
+
+ Instance \pat_gen/mux_214_i5 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/random_y[6] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/random_y[5] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/random_y[4] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 45
+
+ Net n3799 
+
+ Instance \pat_gen/mux_214_i4 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/random_y[6] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/random_y[5] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/random_y[4] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/random_y[3] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 46
+
+ Net n3802 
+
+ Instance \pat_gen/mux_214_i3 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/random_y[6] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/random_y[5] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/random_y[4] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/random_y[3] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net \pat_gen/random_y[2] 
+
+ Instance \pat_gen/add_215_add_5 
+
+Combinational loop found : 47
+
+ Net \pat_gen/random_y[1] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/random_y[6] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/random_y[5] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/random_y[4] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/random_y[3] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net \pat_gen/random_y[2] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1541 
+
+ Instance \pat_gen/mux_213_i2 
+
+Combinational loop found : 48
+
+ Net n3609 
+
+ Instance \pat_gen/i213 
+
+ Net n2219 
+
+ Instance \pat_gen/mux_214_i2 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/random_y[6] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/random_y[5] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/random_y[4] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/random_y[3] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net \pat_gen/random_y[2] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1541 
+
+ Instance \pat_gen/mux_213_i2 
+
+Combinational loop found : 49
+
+ Net \pat_gen/random_y[2] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+ Net \pat_gen/LessThan_209/n20 
+
+ Instance i930 
+
+ Net \pat_gen/LessThan_209/n18 
+
+ Instance i682 
+
+ Net \pat_gen/LessThan_209/n16 
+
+ Instance i680 
+
+ Net \pat_gen/LessThan_209/n14 
+
+ Instance i678 
+
+ Net \pat_gen/LessThan_209/n12 
+
+ Instance i931 
+
+ Net \pat_gen/LessThan_209/n10 
+
+ Instance i676 
+
+ Net \pat_gen/LessThan_209/n8 
+
+ Instance i675 
+
+Combinational loop found : 50
+
+ Net \pat_gen/random_y[3] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+ Net \pat_gen/LessThan_209/n20 
+
+ Instance i930 
+
+ Net \pat_gen/LessThan_209/n18 
+
+ Instance i682 
+
+ Net \pat_gen/LessThan_209/n16 
+
+ Instance i680 
+
+ Net \pat_gen/LessThan_209/n14 
+
+ Instance i678 
+
+ Net \pat_gen/LessThan_209/n12 
+
+ Instance i931 
+
+ Net \pat_gen/LessThan_209/n10 
+
+ Instance i676 
+
+ Net \pat_gen/LessThan_209/n8 
+
+ Instance i675 
+
+Combinational loop found : 51
+
+ Net \pat_gen/random_y[4] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+ Net \pat_gen/LessThan_209/n20 
+
+ Instance i930 
+
+ Net \pat_gen/LessThan_209/n18 
+
+ Instance i682 
+
+ Net \pat_gen/LessThan_209/n16 
+
+ Instance i680 
+
+ Net \pat_gen/LessThan_209/n14 
+
+ Instance i678 
+
+ Net \pat_gen/LessThan_209/n12 
+
+ Instance i931 
+
+ Net \pat_gen/LessThan_209/n10 
+
+ Instance i676 
+
+Combinational loop found : 52
+
+ Net \pat_gen/random_y[5] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+ Net \pat_gen/LessThan_209/n20 
+
+ Instance i930 
+
+ Net \pat_gen/LessThan_209/n18 
+
+ Instance i682 
+
+ Net \pat_gen/LessThan_209/n16 
+
+ Instance i680 
+
+ Net \pat_gen/LessThan_209/n14 
+
+ Instance i678 
+
+ Net \pat_gen/LessThan_209/n12 
+
+ Instance i931 
+
+Combinational loop found : 53
+
+ Net \pat_gen/random_y[6] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+ Net \pat_gen/LessThan_209/n20 
+
+ Instance i930 
+
+ Net \pat_gen/LessThan_209/n18 
+
+ Instance i682 
+
+ Net \pat_gen/LessThan_209/n16 
+
+ Instance i680 
+
+ Net \pat_gen/LessThan_209/n14 
+
+ Instance i678 
+
+Combinational loop found : 54
+
+ Net \pat_gen/random_y[7] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+ Net \pat_gen/LessThan_209/n20 
+
+ Instance i930 
+
+ Net \pat_gen/LessThan_209/n18 
+
+ Instance i682 
+
+ Net \pat_gen/LessThan_209/n16 
+
+ Instance i680 
+
+Combinational loop found : 55
+
+ Net \pat_gen/random_y[8] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+ Net \pat_gen/LessThan_209/n20 
+
+ Instance i930 
+
+ Net \pat_gen/LessThan_209/n18 
+
+ Instance i682 
+
+Combinational loop found : 56
+
+ Net \pat_gen/random_y[9] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+ Net \pat_gen/LessThan_209/n20 
+
+ Instance i930 
+
+Combinational loop found : 57
+
+ Net \pat_gen/random_y[10] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+ Net \pat_gen/LessThan_209/n22 
+
+ Instance i929 
+
+Combinational loop found : 58
+
+ Net \pat_gen/random_y[11] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+ Net \pat_gen/LessThan_209/n24 
+
+ Instance i928 
+
+Combinational loop found : 59
+
+ Net \pat_gen/random_y[12] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+ Net \pat_gen/LessThan_209/n26 
+
+ Instance i927 
+
+Combinational loop found : 60
+
+ Net \pat_gen/random_y[13] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+Combinational loop found : 61
+
+ Net \pat_gen/random_y[14] 
+
+ Instance \pat_gen/add_215_add_5 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net n2225 
+
+ Instance i924 
+
+Combinational loop found : 62
+
+ Net n3850 
+
+ Instance \pat_gen/mux_214_i1 
+
+ Net \pat_gen/n1527 
+
+ Instance \pat_gen/mux_213_i16 
+
+ Net \pat_gen/n1523 
+
+ Instance i694 
+
+ Net \pat_gen/LessThan_210/n30 
+
+ Instance i693 
+
+ Net \pat_gen/LessThan_210/n28 
+
+ Instance i692 
+
+ Net \pat_gen/LessThan_210/n26 
+
+ Instance i691 
+
+ Net \pat_gen/LessThan_210/n24 
+
+ Instance i690 
+
+ Net \pat_gen/LessThan_210/n22 
+
+ Instance i689 
+
+ Net \pat_gen/LessThan_210/n20 
+
+ Instance i688 
+
+ Net \pat_gen/LessThan_210/n18 
+
+ Instance i920 
+
+ Net \pat_gen/LessThan_210/n16 
+
+ Instance i921 
+
+ Net \pat_gen/LessThan_210/n14 
+
+ Instance i687 
+
+ Net \pat_gen/LessThan_210/n12 
+
+ Instance i686 
+
+ Net \pat_gen/LessThan_210/n10 
+
+ Instance i922 
+
+ Net \pat_gen/LessThan_210/n8 
+
+ Instance i923 
+
+ Net \pat_gen/LessThan_210/n6 
+
+ Instance i684 
+
+ Net \pat_gen/n1528 
+
+ Instance \pat_gen/mux_213_i15 
+
+ Net \pat_gen/n1529 
+
+ Instance \pat_gen/mux_213_i14 
+
+ Net \pat_gen/n1530 
+
+ Instance \pat_gen/mux_213_i13 
+
+ Net \pat_gen/n1531 
+
+ Instance \pat_gen/mux_213_i12 
+
+ Net \pat_gen/n1532 
+
+ Instance \pat_gen/mux_213_i11 
+
+ Net \pat_gen/n1533 
+
+ Instance \pat_gen/mux_213_i10 
+
+ Net \pat_gen/n1534 
+
+ Instance \pat_gen/mux_213_i9 
+
+ Net \pat_gen/n1535 
+
+ Instance \pat_gen/mux_213_i8 
+
+ Net \pat_gen/n1536 
+
+ Instance \pat_gen/mux_213_i7 
+
+ Net \pat_gen/n1537 
+
+ Instance \pat_gen/mux_213_i6 
+
+ Net \pat_gen/n1538 
+
+ Instance \pat_gen/mux_213_i5 
+
+ Net \pat_gen/n1539 
+
+ Instance \pat_gen/mux_213_i4 
+
+ Net \pat_gen/n1540 
+
+ Instance \pat_gen/mux_213_i3 
+
+ Net \pat_gen/n1542 
+
+ Instance \pat_gen/mux_213_i1 
+
+WARNING <35002032> - synthesis: Register \pat_gen/inited with asynchronous clock enable is not supported. (z:/final/snake/source/impl_1/background.vhd 58[3] 168[10])
+WARNING <35002032> - synthesis: Register \pat_gen/start with asynchronous clock enable is not supported. (z:/final/snake/source/impl_1/background.vhd 58[3] 168[10])
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_head_xy_future_i0 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_length_future_i0_i0 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_head_xy_future_i23 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_head_xy_future_i20 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i24 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i23 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_head_xy_future_i18 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_head_xy_future_i17 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i20 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_head_xy_future_i7 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_head_xy_future_i6 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/snake_head_xy_future_i5 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i7 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i6 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i5 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i4 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i3 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/food_xy_future_i0_i1 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/start_set will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \pat_gen/inited_set will be ignored.
+CRITICAL <35001783> - synthesis: Mapping latch i4540 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+CRITICAL <35001783> - synthesis: Mapping latch i4536 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
+INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (top)######################
+Number of register bits => 747 of 5280 (14 % )
+EBR_B => 3
+CCU2 => 777
+FD1P3XZ => 747
+HSOSC_CORE => 1
+IB => 2
+IOL_B => 1
+LUT4 => 1889
+OB => 19
+PLL_B => 1
+################### End Area Report ##################
+Number of odd-length carry chains : 45
+Number of even-length carry chains : 52
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 6
+  Net : osc_c, loads : 1
+  Net : myNES/NESclk_c, loads : 2
+  Net : myNES/latch_c, loads : 1
+  Net : vga_clk/frameclk, loads : 1
+  Net : pll/lscc_pll_inst/pll_clk, loads : 0
+  Net : pll/lscc_pll_inst/osc_out_c, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : pat_gen/inited, loads : 685
+  Net : myNES/n625, loads : 65
+  Net : myNES/n730, loads : 48
+  Net : pat_gen/snake_length_future_0__N_182, loads : 36
+  Net : vga_clk/row[9], loads : 28
+  Net : vga_clk/col[4], loads : 28
+  Net : vga_clk/row[8], loads : 27
+  Net : vga_clk/col[8], loads : 27
+  Net : vga_clk/col[7], loads : 27
+  Net : myNES/output_c_1, loads : 26
+################### End Clock Report ##################
+
+Peak Memory Usage: 225 MB
+
+--------------------------------------------------------------
+Total CPU Time: 7 secs 
+Total REAL Time: 16 secs 
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

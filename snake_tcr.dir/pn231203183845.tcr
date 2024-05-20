@@ -1,0 +1,35 @@
+#Start recording tcl command: 12/3/2023 17:18:20
+#Project Location: Z:/final/snake; Project name: snake
+prj_create -name "snake" -impl "impl_1" -dev iCE40UP5K-UWG30ITR -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_set_strategy_value -strategy Strategy1 lse_vhdl2008=True
+prj_add_source "Z:/final/snake/source/impl_1/top.vhd"
+prj_add_source "Z:/final/snake/source/impl_1/control_joypad.vhd"
+prj_add_source "Z:/final/snake/source/impl_1/background.vhd"
+prj_add_source "Z:/final/snake/source/impl_1/vga.vhd"
+prj_set_impl_opt -impl "impl_1" "top" "top"
+prj_set_impl_opt -impl "impl_1" -rem "top"
+prj_set_impl_opt -impl "impl_1" "top" "top"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "Z:/final/snake/source/impl_1/NEScontroller.vhd"
+prj_remove_source "Z:/final/snake/source/impl_1/control_joypad.vhd"
+prj_add_source "Z:/final/snake/source/impl_1/memory.vhd"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "Z:/final/snake/mypill/mypill.ipx"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_device -part iCE40UP5K-SG48I -performance "High-Performance_1.2V"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+#Stop recording: 12/3/2023 18:38:45

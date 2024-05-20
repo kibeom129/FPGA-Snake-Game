@@ -1,0 +1,7 @@
+-ver "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.vhd"
+-ver "Z:/final/snake/mypll/rtl/mypll.v"
+-path "Z:/final/snake/mypll" "Z:/final/snake"
+-vh2008
+-top mypll
+-a "iCE40UP"

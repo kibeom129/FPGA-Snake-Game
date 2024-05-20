@@ -1,0 +1,104 @@
+
+tmcheck -par "snake_impl_1.par" 
+
+bitgen -w "snake_impl_1.udb" -f "snake_impl_1.t2b" 
+Loading snake_impl_1.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+
+
+BITGEN: Bitstream Generator Radiant Software (64-bit) 2023.1.0.43.3
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "Z:\final\snake\impl_1\snake_impl_1.bin".
+    <postMsg mid="1081100" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
+Bitstream generation complete!
+
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 154 MB
+
+
+ibisgen "snake_impl_1.udb" "C:/lscc/radiant/2023.1/cae_library/ibis/iCE40UP.ibs"
+IBIS Models Generator: Lattice Radiant Software (64-bit) 2023.1.0.43.3
+
+Mon Dec 18 14:52:09 2023
+
+Loading snake_impl_1.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+Created design models.
+
+
+Generating: Z:\final\snake\impl_1\IBIS\snake_impl_1.ibs
+
+
+    <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
+
+backanno "snake_impl_1.udb"  -o "snake_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
+backanno: version Radiant Software (64-bit) 2023.1.0.43.3
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Loading udb::Database ...
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Writing a verilog netlist based on the snake_impl_1 design file.
+
+Writing Verilog netlist to file snake_impl_1_vo.vo
+Writing SDF timing to file snake_impl_1_vo.sdf
+Backanno finished with 0 posted error messages.
+Total CPU Time: 6 secs 
+Total REAL Time: 8 secs 
+Peak Memory Usage: 196 MB

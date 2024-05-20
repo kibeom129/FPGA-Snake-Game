@@ -6,7 +6,7 @@ This project is a snake game built through sequential logic in VHDL. Players wil
 
 ## Developers
 
-Brian Kim, Senri Nakamura, Alex Moy
+Senri Nakamura, Alex Moy, Brian Kim 
 
 ## Description
 
@@ -18,3 +18,4 @@ The VHDL files we wrote can be found at "source/impl_1".
 ## Our game in action
 
 ![giphy](https://github.com/SenriNakamura/FPGA_snake_game/assets/112661390/937b6a59-5b7e-4394-9746-0bbe2dc1ff62)
+

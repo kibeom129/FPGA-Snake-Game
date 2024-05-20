@@ -1,0 +1,16 @@
+v 4
+file . "vga.vhd" "89ac98f35b8d1ebe25761f85a9bff72f70d32bb4" "20231206201322.819":
+  entity vga at 1( 0) + 0 on 19;
+  architecture synth of vga at 17( 334) + 0 on 20;
+file . "top.vhd" "8752bdbf5fd314e29f697d915836eed64e944134" "20231206201322.816":
+  entity top at 1( 0) + 0 on 17;
+  architecture synth of top at 20( 389) + 0 on 18;
+file . "NEScontroller.vhd" "6c5cbeaef08a3c2c291be2a7cff639e1aad6e6d9" "20231206201322.813":
+  entity nescontroller at 1( 0) + 0 on 15;
+  architecture synth of nescontroller at 15( 261) + 0 on 16;
+file . "memory.vhd" "fb32ca0be703a91a8c23302334baada73423e922" "20231206201322.809":
+  entity rom at 1( 0) + 0 on 13;
+  architecture synth of rom at 15( 236) + 0 on 14;
+file . "background.vhd" "f79b27f8c39603251bd1bce30331a7770e611466" "20231206201322.806":
+  entity background at 1( 0) + 0 on 11;
+  architecture synth of background at 17( 350) + 0 on 12;

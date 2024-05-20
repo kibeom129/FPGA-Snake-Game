@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.vhd"
+-lib "work" -vhd "Z:/final/snake/source/impl_1/top.vhd" "Z:/final/snake/source/impl_1/NEScontroller.vhd" "Z:/final/snake/source/impl_1/background.vhd" "Z:/final/snake/source/impl_1/vga.vhd" "Z:/final/snake/source/impl_1/memory.vhd"
+-path "Z:/final/snake"
+-vh2008
+-top top
+-isTop
+-a "iCE40UP"
